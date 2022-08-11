@@ -39,11 +39,11 @@ class Order
    def initialize(customer_info,customer_order)
       @customer_info = customer_info
       @customer_order = customer_order
-      @submitted = false
+      @sent? = false
    end
 
-   def submit
-    # submits the order
+   def send
+    # sends the order
    end
 
    def customer
@@ -154,8 +154,8 @@ customer_order.add_item(option2)
 customer_order.add_item(option3)
 customer_info = CustomerInfo.new("Messi", "Paris", "07123456789")
 order = Order.new(customer_info,customer_order)
-order.submit
-order.submitted # True
+order.send
+order.sent? # True
 
 # Formatting the order
 order.format # Date: 10/10/2022, Dish1 : £5, Dish2 : £10, Dish3 £15
@@ -191,8 +191,8 @@ customer_order.add_item(option2)
 customer_order.add_item(option3)
 customer_info = CustomerInfo.new("Messi", "Paris", "07123456789")
 order = Order.new(customer_info, customer_order)
-order.submit
-order.submitted # True
+order.send
+order.sent? # True
 
 # Class Menu
 menu = Menu.new

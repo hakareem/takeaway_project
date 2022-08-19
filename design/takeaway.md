@@ -158,7 +158,7 @@ order.send
 order.sent? # True
 
 # Formatting the order
-order.format # Date: 10/10/2022, Dish1 : £5, Dish2 : £10, Dish3 £15
+order.format # Dish1 : £5, Dish2 : £10, Dish3 £15
 
 ```
 
